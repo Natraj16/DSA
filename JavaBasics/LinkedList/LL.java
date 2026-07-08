@@ -68,7 +68,16 @@ public class LL {
     //step 1 visualize how the ll will look like
 
     public void insertRec(int val, int index){
-
+        head=insertRec(val,index, head);
+    }
+    private Node insertRec(int val, int index, Node node ){
+        if(index==0){
+            Node temp=new Node(node, val);
+            size++;
+            return temp;
+        }
+        node.next=insertRec(val,index-1,node.next);
+        return node;
     }
 
     public int deleteFirst(){
@@ -124,6 +133,7 @@ public class LL {
         Node prev= get(index-1);
         int val=prev.next.value;
         prev.next=prev.next.next;
+        System.out.println();
         return val;
     }
     public Node find(int value){
