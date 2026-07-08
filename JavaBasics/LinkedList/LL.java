@@ -61,6 +61,16 @@ public class LL {
 
         size++;
     }
+
+    //insert using recursion
+    //we are given index value and head
+    //observation: 1)have a void return type and make change in LL 2)have a node return type that returns the list node to change the structure
+    //step 1 visualize how the ll will look like
+
+    public void insertRec(int val, int index){
+
+    }
+
     public int deleteFirst(){
 
         int val=head.value;
